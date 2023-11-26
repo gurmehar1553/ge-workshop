@@ -47,15 +47,11 @@ public class DeckOfCards{
 		}
 	}
 }
-class Pair implements Comparable<Pair>{
+class Pair{
 	String suit,rank;
 	Pair(String s,String r){
 		suit = s;
 		rank = r;
-	}
-	@Override
-	public int compareTo(Pair p) {
-		return (Integer.parseInt(this.rank) < Integer.parseInt(p.rank))?1:0;
 	}
 }
 class Player{
@@ -87,7 +83,6 @@ class Player{
 		});
 	}
 	public void printCards(){
-
 		for(Pair p: queue){
 			System.out.print(p.rank+" of "+p.suit+" , ");
 		}
